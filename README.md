@@ -27,7 +27,6 @@ src/
   model/         DeepSeek / Claude / OpenAI provider、模型目录、消息映射、本地 embedding（BGE-small-zh）
   tools/         内置只读工具
   skills/        Skill 加载（渐进披露：先注入名称+简介，用时才读全文）
-  hooks/         生命周期钩子
   permissions/   权限判定
   dev/           验证脚本（verify:*，均不消耗 API）
   web/           HTTP/SSE 服务端 + React 客户端
@@ -91,6 +90,6 @@ npm run verify:vision     # 使用 mock 验证多模态消息，不调用真实 
 
 ## 不纳入版本控制的内容
 
-`.env`（密钥）、`node_modules/`、`dist/`、`.lazy-runtime/`（机器专属 Node 与日志）、`workspace/.runtime/`（索引、进度与模型缓存），以及 `workspace/projects/` 下的会话和附件。
+`.env`（密钥）、`node_modules/`、`dist/`、`src/web/static/`（前端构建产物，首次启动自动生成）、`.lazy-runtime/`（机器专属 Node 与日志）、`workspace/.runtime/`（索引、进度与模型缓存）、`workspace/memory/用户偏好.md`（个人偏好），以及 `workspace/projects/` 下的会话和附件。
 
 这些都是可再生的、机器绑定的，或属于个人隐私数据。克隆后首次启动会自动重建。

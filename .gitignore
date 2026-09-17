@@ -26,3 +26,7 @@ _originals/
 .env.local
 .transformers-cache/
 .DS_Store
+
+# Not published: build output the launcher regenerates, and personal preferences.
+src/web/static/
+workspace/memory/用户偏好.md
