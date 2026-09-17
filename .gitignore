@@ -1,0 +1,28 @@
+node_modules/
+dist/
+.env
+*.tsbuildinfo
+*.patch
+
+# Machine-local Node runtime downloaded by the launcher, plus its logs.
+.lazy-runtime/
+.tmp/
+logs/
+
+# Agent runtime state: attachments, indexes, progress, embedding model cache.
+workspace/.runtime/
+
+# Conversation records and uploaded files. They belong to the person using the
+# agent, not to the program — DIRECTOR.md, memory/ and skills/ stay in the repo,
+# sessions and attachments never do.
+workspace/projects/*/sessions/
+workspace/projects/*/files/
+
+# Archived source files kept by the importer so descriptions can be redone with
+# a better model later. Large binaries, not source.
+_originals/
+
+# Local caches and OS files
+.env.local
+.transformers-cache/
+.DS_Store
